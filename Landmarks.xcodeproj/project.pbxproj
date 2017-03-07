@@ -14,6 +14,7 @@
 		4BB331891E6E8D7800EFF08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB331871E6E8D7800EFF08D /* LaunchScreen.storyboard */; };
 		4BB331911E6E8DA600EFF08D /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB331901E6E8DA600EFF08D /* Landmark.swift */; };
 		4BB331941E6E910700EFF08D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB331931E6E910700EFF08D /* MapKit.framework */; };
+		4BB331961E6F612900EFF08D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB331951E6F612900EFF08D /* DetailViewController.swift */; };
 		589120E09911417B75F4478A /* Pods_Landmarks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C582732568CBAAB782590C /* Pods_Landmarks.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		4BB3318A1E6E8D7800EFF08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BB331901E6E8DA600EFF08D /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		4BB331931E6E910700EFF08D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4BB331951E6F612900EFF08D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		90C582732568CBAAB782590C /* Pods_Landmarks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landmarks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C692814227D8BEC0B04624DB /* Pods-Landmarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmarks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Landmarks/Pods-Landmarks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 			children = (
 				4BB3317E1E6E8D7800EFF08D /* AppDelegate.swift */,
 				4BB331801E6E8D7800EFF08D /* ViewController.swift */,
+				4BB331951E6F612900EFF08D /* DetailViewController.swift */,
 				4BB331901E6E8DA600EFF08D /* Landmark.swift */,
 				4BB331821E6E8D7800EFF08D /* Main.storyboard */,
 				4BB331851E6E8D7800EFF08D /* Assets.xcassets */,
@@ -226,6 +229,7 @@
 				4BB331811E6E8D7800EFF08D /* ViewController.swift in Sources */,
 				4BB3317F1E6E8D7800EFF08D /* AppDelegate.swift in Sources */,
 				4BB331911E6E8DA600EFF08D /* Landmark.swift in Sources */,
+				4BB331961E6F612900EFF08D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +393,7 @@
 				4BB3318F1E6E8D7800EFF08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

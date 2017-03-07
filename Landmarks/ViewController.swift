@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         fetchLandmarks()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            let destVC = segue.destination as! DetailViewController
+        }
+    }
+    
     //MARK: - Map View Methods
     
     func annotateMapLocations() {
@@ -33,7 +39,7 @@ class ViewController: UIViewController {
         }
         landmarksMap.removeAnnotations(pinsToRemove)
         
-        for landmark in self.landmarksArray {
+        for landmark in landmarksArray {
             let landmarkAnnotation = MKPointAnnotation()
             print("\(landmark)")
             print("\(landmark.latitude), \(landmark.latitude)")
@@ -65,6 +71,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        landmarksMap.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,4 +80,28 @@ class ViewController: UIViewController {
 
 
 }
+
+extension ViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseIdentifier = "pin"
+        var pin = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) as? MKPinAnnotationView
+        if pin == nil {
+            pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+            pin!.pinTintColor = UIColor.red
+            pin!.canShowCallout = true
+            pin!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        } else {
+            pin!.annotation = annotation
+        }
+        return pin
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            performSegue(withIdentifier: "detailSegue", sender: self)
+        }
+    }
+}
+    
 
