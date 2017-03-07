@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import MapKit
+import Parse
 
-class Landmark: NSObject {
+class Landmark: PFObject, PFSubclassing {
 
     var name                :String?
     var streetAddress       :String?
@@ -30,6 +30,10 @@ class Landmark: NSObject {
         self.latitude = latitude
         self.longitude = longitude
         self.landmarkDescription = landmarkDescription
+    }
+    
+    static func parseClassName() -> String {
+        return "Landmark"
     }
     
 }
