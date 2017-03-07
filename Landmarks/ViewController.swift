@@ -81,6 +81,8 @@ class ViewController: UIViewController {
 
 }
 
+//mhorga.org/2015/08/01/introduction-to-mapkit.html as reference
+
 extension ViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
