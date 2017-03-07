@@ -11,16 +11,16 @@ import Parse
 
 class Landmark: PFObject, PFSubclassing {
 
-    var name                :String?
-    var streetAddress       :String?
-    var city                :String?
-    var state               :String?
-    var zip                 :String?
-    var latitude            :String?
-    var longitude           :String?
-    var landmarkDescription :String?
+    @NSManaged var name                :String
+    @NSManaged var streetAddress       :String
+    @NSManaged var city                :String
+    @NSManaged var state               :String
+    @NSManaged var zip                 :String
+    @NSManaged var latitude            :NSNumber
+    @NSManaged var longitude           :NSNumber
+    @NSManaged var landmarkDescription :String
     
-    convenience init(name: String, streetAddress: String, city: String, state: String, zip: String, latitude: String, longitude: String, landmarkDescription: String) {
+    convenience init(name: String, streetAddress: String, city: String, state: String, zip: String, latitude: NSNumber, longitude: NSNumber, landmarkDescription: String) {
         self.init()
         self.name = name
         self.streetAddress = streetAddress
